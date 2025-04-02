@@ -9,7 +9,7 @@
   "categories": [
     "Other"
   ],
-  "activationEvents": [],
+  "activationEvents": ["onStartupFinished"],
   "main": "./out/extension.js",
   "contributes": {
     "commands": [
@@ -61,8 +61,11 @@
             "description": "List of keywords to highlight with attention color"
           },
           "lightmouse.criticalColors":{
-            "type":"string",
-            "default": "#FF0000"
+            "type":"object",
+            "default": {
+              "operator": "keyword.lightmouse.critical",
+              "color": "#FF0000"
+            }
           }
         }
       }
