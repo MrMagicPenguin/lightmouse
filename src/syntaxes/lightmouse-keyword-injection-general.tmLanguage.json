@@ -1,0 +1,18 @@
+{
+    "scopeName": "lightmouse.keyword-injection",
+    "injectionSelector": "L:comment.line, L:comment.block",
+    "patterns": [
+      {
+        "name": "keyword.lightmouse.critical",
+        "match": "\\b(IMPORTANT|CRITICAL|URGENT)\\b"
+      },
+      {
+        "name": "keyword.lightmouse.note",
+        "match": "\\b(NOTE|REMEMBER|NOTICE)\\b"
+      },
+      {
+        "name": "keyword.lightmouse.highlight",
+        "match": "\\b(HIGHLIGHT|REVIEW|CHECK)\\b"
+      }
+    ]
+  }
