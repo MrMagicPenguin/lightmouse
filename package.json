@@ -9,7 +9,9 @@
   "categories": [
     "Other"
   ],
-  "activationEvents": ["onStartupFinished"],
+  "activationEvents": [
+    "onStartupFinished"
+  ],
   "main": "./out/extension.js",
   "contributes": {
     "commands": [
@@ -31,45 +33,32 @@
         ]
       }
     ],
-    "configuration": [
-      {
-        "title": "Lightmouse",
-        "properties": {
-          "lightmouse.criticalKeywords": {
-            "type": "array",
-            "default": [
-              "URGENT",
-              "IMPORTANT",
-              "!!"
-            ],
-            "description": "List of high-priority keywords."
+    "configuration": {
+      "title": "LightMouse",
+      "properties": {
+        "lightmouse.keywordGroups": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "string"
           },
-          "lightmouse.noteKeywords": {
-            "type": "array",
-            "default": [
-              "NOTE",
-              "INFO"
-            ],
-            "description": "List of keywords to highlight as Notes"
-          },
-          "lightmouse.highlightKeywords": {
-            "type": "array",
-            "default": [
-              "HIGHLIGHT",
-              "REVIEW"
-            ],
-            "description": "List of keywords to highlight with attention color"
-          },
-          "lightmouse.criticalColors":{
-            "type":"object",
-            "default": {
-              "operator": "keyword.lightmouse.critical",
-              "color": "#FF0000"
+          "default": {
+            "critical": "#FF0000"
+          }
+        },
+        "lightmouse.keywordGroupWords": {
+          "type": "object",
+          "properties": {
+            "critical": {
+              "type": "string",
+              "default": "Hello, World"
             }
+          },
+          "additionalProperties": {
+            "type": "string"
           }
         }
       }
-    ]
+    }
   },
   "scripts": {
     "vscode:prepublish": "npm run compile",
