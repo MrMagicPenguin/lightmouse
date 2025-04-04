@@ -36,26 +36,56 @@
     "configuration": {
       "title": "LightMouse",
       "properties": {
-        "lightmouse.keywordGroups": {
-          "type": "object",
-          "additionalProperties": {
-            "type": "string"
-          },
-          "default": {
-            "critical": "#FF0000"
-          }
-        },
-        "lightmouse.keywordGroupWords": {
-          "type": "object",
-          "properties": {
-            "critical": {
-              "type": "string",
-              "default": "Hello, World"
+        "lightmouse.keywordConfigurations": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "groupName": {
+                "type": "string"
+              },
+              "pattern": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "textColor": {
+                "type": "string"
+              },
+              "backgroundColor": {
+                "type": "string"
+              },
+              "italic": {
+                "type": "boolean"
+              },
+              "bold": {
+                "type": "boolean"
+              },
+              "underline": {
+                "type": "boolean"
+              },
+              "strikethrough": {
+                "type": "boolean"
+              }
             }
           },
-          "additionalProperties": {
-            "type": "string"
-          }
+          "default": [
+            {
+              "groupName": "critical",
+              "pattern": [
+                "URGENT",
+                "IMPORTANT",
+                "CRITICAL"
+              ],
+              "textColor": "#FF0000",
+              "backgroundColor": "transparent",
+              "bold": true,
+              "italic": false,
+              "underline": false,
+              "strikethrough": true
+            }
+          ]
         }
       }
     }
