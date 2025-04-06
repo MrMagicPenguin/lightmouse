@@ -14,12 +14,6 @@
   ],
   "main": "./out/extension.js",
   "contributes": {
-    "commands": [
-      {
-        "command": "lightmouse.helloWorld",
-        "title": "Hello World"
-      }
-    ],
     "grammars": [
       {
         "scopeName": "lightmouse.keyword-injection",
