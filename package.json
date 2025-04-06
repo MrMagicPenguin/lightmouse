@@ -2,7 +2,14 @@
   "name": "lightmouse",
   "displayName": "LightMouse",
   "description": "Lightweight and highly configurable comment highlighter",
-  "version": "0.0.1",
+  "version": "1.0.0",
+  "author": {
+    "name": "Noah Price",
+    "url": "https://github.com/MrMagicPenguin"
+  },
+  "repository": {
+    "url": "https://github.com/MrMagicPenguin/lightmouse"
+  },
   "engines": {
     "vscode": "^1.98.0"
   },
